@@ -15,6 +15,11 @@ Please import the file GoRestAPIDemo.postman_collection.json into your Postman.
 ## Avaible Postman Calls And Descriptions
 ### Ping Endpoint
 Returns a greeting message
+Endpoint call
+```
+"http://localhost:8080/"
+```
+
 ### Get All Movies
 Queries all the rows for the table Movies
 
