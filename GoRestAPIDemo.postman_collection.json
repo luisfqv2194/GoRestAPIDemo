@@ -1,10 +1,19 @@
 {
 	"info": {
-		"_postman_id": "dc9c5666-b2fc-4b85-a26a-2758b21185ef",
+		"_postman_id": "a6a015c9-ed8c-4baf-bcde-04e753112b93",
 		"name": "GoRestAPIDemo",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
+		{
+			"name": "Ping Endpoint",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
 		{
 			"name": "GetMovieByParcialName",
 			"request": {

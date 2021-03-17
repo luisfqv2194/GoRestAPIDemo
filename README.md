@@ -13,6 +13,8 @@ Go Rest API using Gorm and Fiber. A Rest API that allows to do CRUD operations i
 Please import the file GoRestAPIDemo.postman_collection.json into your Postman.
 
 ## Avaible Postman Calls And Descriptions
+### Ping Endpoint
+Returns a greeting message
 ### Get All Movies
 Queries all the rows for the table Movies
 

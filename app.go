@@ -8,6 +8,7 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
+	"github.com/gofiber/template/html"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
@@ -20,15 +21,14 @@ func initDatabase() {
 		panic("failed to connect database")
 	}
 
-	// Migrate the schema
+	// Migrate the schemas
 	database.DBConn.AutoMigrate(&models.Movie{})
 }
 
 func setupRoutes(app *fiber.App) {
 
 	app.Get("/", func(c *fiber.Ctx) error {
-		return c.Status(fiber.StatusOK).JSON(fiber.Map{
-			"success": true,
+		return c.Render("index", fiber.Map{
 			"message": "You are at the endpoint 😉",
 		})
 	})
@@ -36,9 +36,8 @@ func setupRoutes(app *fiber.App) {
 	api := app.Group("/api")
 
 	api.Get("", func(c *fiber.Ctx) error {
-		return c.Status(fiber.StatusOK).JSON(fiber.Map{
-			"success": true,
-			"message": "You are at the api endpoint 😉",
+		return c.Render("index", fiber.Map{
+			"message": "You are at the endpoint 😉",
 		})
 	})
 
@@ -46,7 +45,12 @@ func setupRoutes(app *fiber.App) {
 }
 
 func main() {
-	app := fiber.New()
+
+	engine := html.New("./views", ".html")
+
+	app := fiber.New(fiber.Config{
+		Views: engine,
+	})
 
 	app.Use(logger.New())
 
