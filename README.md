@@ -5,6 +5,10 @@ Go Rest API using Gorm and Fiber. A Rest API that allows to do CRUD operations i
 1. Go must be installed. (Download [here](https://golang.org/))
 2. Postman must be installed. (Download [here](https://www.postman.com/downloads/))
 
+## Installation
+1. Clone this repo to a directory
+
+
 ## Introduction
 Please import the file GoRestAPIDemo.postman_collection.json into your Postman.
 
