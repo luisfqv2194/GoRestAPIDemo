@@ -1,5 +1,5 @@
 # GoRestAPIDemo
-Go Rest API using Gorm and Fiber. A Rest API that allows to do CRUD operations in a SQLlite database.
+Go Rest API using Gorm and Fiber V2, that allows to do CRUD operations in a SQLlite database for a movie catalog.
 
 ## Requisites
 1. Go must be installed. (Download [here](https://golang.org/))
