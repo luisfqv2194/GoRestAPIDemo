@@ -29,13 +29,13 @@ Endpoint call
 ```
 
 ### Get Movie By Parcial Name
-Extracts a movie using a partial title in the search
+Extracts a movie using a partial title name in the search
 
 Endpoint call
 ```
 "http://localhost:8080/api/movies/{PARTIAL_TITLE}"
 ```
-Replace PARTIAL_TITLE with the full name or a parical name of a movie, an error will be returned if no movie matches the title provided
+Replace PARTIAL_TITLE with the full name or a partial name of a movie, an error will be returned if no movie matches the title provided
 ### Insert New Movie
 Inserts new movies into the database
 Endpoint call
