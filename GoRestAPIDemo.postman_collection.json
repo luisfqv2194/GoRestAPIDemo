@@ -10,7 +10,17 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -84,7 +94,12 @@
 							"value": "2001",
 							"type": "text"
 						}
-					]
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
 				},
 				"url": {
 					"raw": "http://localhost:8080/api/movies/",
@@ -132,7 +147,7 @@
 						},
 						{
 							"key": "ID",
-							"value": "3",
+							"value": "1",
 							"type": "text"
 						}
 					],
@@ -166,38 +181,8 @@
 				},
 				"method": "DELETE",
 				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "Rating",
-							"value": "M-18",
-							"type": "text"
-						},
-						{
-							"key": "Title",
-							"value": "King Kong vs Godzilla",
-							"type": "text"
-						},
-						{
-							"key": "Duration",
-							"value": "150",
-							"type": "text"
-						},
-						{
-							"key": "Year",
-							"value": "2021",
-							"type": "text"
-						}
-					],
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "http://localhost:8080/api/movies/delete/3",
+					"raw": "http://localhost:8080/api/movies/delete/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -207,7 +192,7 @@
 						"api",
 						"movies",
 						"delete",
-						"3"
+						"1"
 					]
 				}
 			},

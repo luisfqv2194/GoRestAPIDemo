@@ -44,8 +44,7 @@ func setupRoutes(app *fiber.App) {
 	routes.MovieRoute(api.Group("/movies"))
 }
 
-func main() {
-
+func Setup() *fiber.App {
 	engine := html.New("./views", ".html")
 
 	app := fiber.New(fiber.Config{
@@ -57,6 +56,12 @@ func main() {
 	initDatabase()
 
 	setupRoutes(app)
+	return app
+}
+
+func main() {
+
+	app := Setup()
 
 	app.Listen(":8080")
 }

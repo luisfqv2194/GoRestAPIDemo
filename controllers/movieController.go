@@ -22,7 +22,7 @@ func GetMovie(c *fiber.Ctx) error {
 	title := "%" + c.Params("title") + "%"
 	var movie Movie
 	if err := DBConn.First(&movie, "Title LIKE ?", title).Error; err != nil {
-		return c.Status(fiber.StatusOK).JSON(fiber.Map{
+		return c.Status(fiber.StatusNotFound).JSON(fiber.Map{
 			"success": false,
 			"err":     err.Error(),
 		})
@@ -68,7 +68,7 @@ func DeleteMovie(c *fiber.Ctx) error {
 	id := c.Params("id")
 	var movie Movie
 	if err := DBConn.First(&movie, id).Error; err != nil {
-		return c.Status(fiber.StatusOK).JSON(fiber.Map{
+		return c.Status(fiber.StatusNotFound).JSON(fiber.Map{
 			"success": false,
 			"err":     err.Error(),
 		})
