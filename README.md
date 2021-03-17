@@ -13,7 +13,7 @@ Please import the file GoRestAPIDemo.postman_collection.json into your Postman.
 Queries all the rows for the table Movies
 
 ### Get Movie By Parcial Name
-Queries a row that has a matching pattern given with the spacified name
+Extracts a movie using a partial title in the search
 ### Insert New Movie
 Inserts new movies into the database
 ### Update Movie
