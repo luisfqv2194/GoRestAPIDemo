@@ -12,6 +12,11 @@ Go Rest API using Gorm and Fiber V2, that allows to do CRUD operations in a SQLl
 ## Introduction
 Please import the file GoRestAPIDemo.postman_collection.json into your Postman.
 
+Run the following inside the root folder, to start the server on port 8080:
+```
+go run .
+```
+
 ## Avaible Postman Calls And Descriptions
 ### Ping Endpoint
 Returns a greeting message
