@@ -1,5 +1,5 @@
 # GoRestAPIDemo
-Go Rest API using Gorm and Fiber. A Rest API that allows to do CRUD operations in a SQLlite database.
+Go Rest API using Gorm and Fiber V2, that allows to do CRUD operations in a SQLlite database for a movie catalog.
 
 ## Requisites
 1. Go must be installed. (Download [here](https://golang.org/))
@@ -11,6 +11,11 @@ Go Rest API using Gorm and Fiber. A Rest API that allows to do CRUD operations i
 
 ## Introduction
 Please import the file GoRestAPIDemo.postman_collection.json into your Postman.
+
+Run the following inside the root folder, to start the server on port 8080:
+```
+go run .
+```
 
 ## Avaible Postman Calls And Descriptions
 ### Ping Endpoint
@@ -29,13 +34,13 @@ Endpoint call
 ```
 
 ### Get Movie By Parcial Name
-Extracts a movie using a partial title in the search
+Extracts a movie using a partial title name in the search
 
 Endpoint call
 ```
 "http://localhost:8080/api/movies/{PARTIAL_TITLE}"
 ```
-Replace PARTIAL_TITLE with the full name or a parical name of a movie, an error will be returned if no movie matches the title provided
+Replace PARTIAL_TITLE with the full name or a partial name of a movie, an error will be returned if no movie matches the title provided
 ### Insert New Movie
 Inserts new movies into the database
 Endpoint call
