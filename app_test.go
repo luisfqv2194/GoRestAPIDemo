@@ -10,7 +10,7 @@ import (
 )
 
 func TestDeleteNegativeIDEndpoint(t *testing.T) {
-	req := httptest.NewRequest("DELETE", "http://localhost:8080/api/movies/delete/-1", nil)
+	req := httptest.NewRequest("DELETE", "http://localhost:8080/api/v1/movies/delete/-1", nil)
 
 	app := Setup()
 
@@ -27,7 +27,7 @@ func TestDeleteNegativeIDEndpoint(t *testing.T) {
 }
 
 func TestGetMovie(t *testing.T) {
-	req := httptest.NewRequest("GET", "http://localhost:8080/api/movies/Space", nil)
+	req := httptest.NewRequest("GET", "http://localhost:8080/api/v1/movies/Space", nil)
 
 	app := Setup()
 

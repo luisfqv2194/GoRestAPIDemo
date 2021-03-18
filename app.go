@@ -33,15 +33,15 @@ func setupRoutes(app *fiber.App) {
 		})
 	})
 
-	api := app.Group("/api")
+	apiV1 := app.Group("/api/v1")
 
-	api.Get("", func(c *fiber.Ctx) error {
+	apiV1.Get("", func(c *fiber.Ctx) error {
 		return c.Render("index", fiber.Map{
 			"message": "You are at the endpoint 😉",
 		})
 	})
 
-	routes.MovieRoute(api.Group("/movies"))
+	routes.MovieRoute(apiV1.Group("/movies"))
 }
 
 func Setup() *fiber.App {
